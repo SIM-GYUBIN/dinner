@@ -1,0 +1,210 @@
+
+ /* 폰트 적용 */
+#main .simgyubin{
+	font-size: 130px;
+	font-family: 'East Sea Dokdo', cursive;	color:black;
+}
+
+#main .free{
+	font-size: 290px;
+	font-family: 'East Sea Dokdo', cursive;
+	color:green;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 백그라운드 */
+body {
+	position: relative;
+	z-index: 1;
+}
+
+body::before {
+	position: absolute;
+	background-image: url('background.jpg');
+	background-size: cover;
+	opacity: 0.5;
+	content: "";
+	top: -10px;
+    left: -10px;
+    right: -10px;
+	bottom: -10px;
+	z-index: -1;
+}
+
+
+
+#container {	
+	display: grid;	
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 33vh 33vh 33vh 1vh;
+	grid-gap: 10px;
+	margin-top: 30px;
+
+	
+}
+/* 심규빈 전역 grid */
+#main {
+	margin-top: 160px;
+	grid-column: 2 / 3;
+	grid-row: 1 / 3;
+}
+
+#main div {
+	text-align: center;
+}
+
+/* 왼쪽 블럭들 기본 */
+#container .block {
+	position: relative;
+	top: 20px;
+	display: grid;
+	color: black; 
+	text-decoration: none;
+	/* padding: 100px; */
+	/* height: 25vh; */
+	justify-content: center;
+	align-content: center;
+	background-color: rgba(235, 235, 235, 0.4);
+	cursor: pointer;
+}
+
+#container a {
+	text-decoration: none;
+
+}
+
+
+.block {
+	width: 100px;
+	height: 50px;
+	transition:width 1s,height 1s;
+	overflow: hidden;
+}
+
+#ddayWord {
+	position: absolute;
+	text-align: center;
+	justify-self: center;
+	align-self: center;
+	/* left: 23px; */
+	transition: all 1s;
+
+}
+
+
+
+video {
+	display: grid;
+	width: 0px;
+}
+
+/* block1 설정 (hover) */
+
+@media (min-width: 481px) {
+	.block:hover {
+		padding: 0;
+		width: 440px;
+		height: 300px;
+		transition:width 1s,height 1s;        /*왜 얘는 줄어들 때는 안먹힐까??*/
+	}
+	
+	.block1:hover #ddayWord{
+		position: absolute;
+
+		font-size: 80px;
+		color: #FFFFFF;
+		text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
+		/* transition: all 1s; */
+	}
+	
+	.block1:hover video {
+		display: block;
+		width: 100%;
+		/* height: 400px;               video는 비율에 맞추어 크기 고정 */
+		transition: all step-end 1s;
+	}
+	
+}
+
+
+
+
+/* ------------------------------MOBILE-------------------------------------- */
+
+@media (max-width: 480px) {
+	
+	#container {	
+		display: grid;	
+		grid-template-columns: 1fr;
+		grid-template-rows: 20vh 20vh 30vh 30vh 30vh; 
+		grid-gap: 10px;
+		margin-top: 10px;
+	}
+	
+	#main {
+	margin-top: 0px;
+	grid-column: 1/2;
+	grid-row: 1/2;
+	}
+	
+	#main .simgyubin{
+	font-size: 80px;
+	}
+	
+	#main .free{
+	font-size: 150px;
+	}
+	
+	#container .block {
+		top: 0px;
+	}
+	
+	#container .block1 {
+	grid-row: 3/4;
+	}
+	
+	#container .block2 {
+	grid-row: 4/5;
+	}
+	
+	#container .block3 {
+	grid-row: 5/6;
+	}
+	
+	.block {
+	width: 100%;
+	height: 30vh;
+	}
+	
+/* JAVASCRIPT -> Dday 적용 class	 */
+
+	.block1_M #ddayWord{
+		position: absolute;
+
+		font-size: 80px;
+		color: #FFFFFF;
+		text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	}
+	
+	.block1_M video {
+		display: block;
+		width: 100%;
+	}
+	
+	#fuck {
+		width: 300px;
+	}
+	
+	
+	
+	
+}
+	
+	
+
+
+
