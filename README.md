@@ -1,6 +1,6 @@
 # dinner
 
-군복무 중 생활코딩 보며 html css javascript 독학하며 만든 첫 웹페이지
+20년 군복무 중 생활코딩 보며 html css javascript 독학하며 만든 첫 웹페이지
 
 ![1](https://github.com/SIM-GYUBIN/SGB_CloudProgramming/assets/89975936/4c7c889b-eda2-411d-9385-585cadc28d21)
 
